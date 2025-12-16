@@ -12,4 +12,8 @@ def is_leap_year(year: int) -> bool:
     - Excepto si es divisible por 100
     - Pero sí es bisiesto si es divisible por 400
     """
+    if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+        return True
+    else:
+        return False
     raise NotImplementedError("Implementa is_leap_year(year)")
